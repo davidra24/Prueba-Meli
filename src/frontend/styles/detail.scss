@@ -1,0 +1,41 @@
+@import './variables.scss';
+
+.detail__container {
+    padding-bottom: 20px;
+}
+.detail__breadcum {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+    color: $middlegray;
+}
+
+@media(min-width: 320px){
+    .detail__item {
+        width: 100vw;
+    }
+}
+
+@media(min-width: 768px){
+    .detail__item {
+        width: 90vw;
+    }
+}
+
+@media(min-width: 1024px){
+    .detail__item {
+        width: 80vw;
+    }
+}
+
+.detail__item {
+    margin: 0 auto;
+    background-color: white;
+}
+
+.detail__container-no-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

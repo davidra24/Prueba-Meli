@@ -1,0 +1,28 @@
+@import './variables.scss';
+
+.result__container {
+    padding-bottom: 20px;
+}
+
+@media(min-width: 320px){
+    .result__items {
+        width: 90vw;
+        margin: 0 auto;
+        background-color: white;
+    }
+}
+@media (min-width: 700px) {
+    .result__items {
+        width: 60vw;
+        margin: 0 auto;
+        background-color: white;
+    }
+}
+
+.result__breadcum {
+    width: 58vw;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+    color: $middlegray;
+}
