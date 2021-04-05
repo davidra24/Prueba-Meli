@@ -1,5 +1,10 @@
 import { useState } from 'react';
 
+/**
+ * 
+ * @param {String} initialValue Valor inicial que tendrá el Input a utilizar
+ * @returns Hook personalizado que generaliza el comportamiento de un input
+ */
 export const useInput = (initialValue) => {
   const [value, setValue] = useState(initialValue);
   const onChange = (e) => {

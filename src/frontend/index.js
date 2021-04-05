@@ -8,6 +8,9 @@ import { Router } from "react-router";
 
 const history = createBrowserHistory()
 
+/**
+ * Renderizado principal de aplicación React
+ */
 ReactDOM.hydrate(
   <React.StrictMode>
     <ItemsContextProvider>

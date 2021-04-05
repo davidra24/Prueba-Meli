@@ -5,6 +5,10 @@ import { Detail } from "./Detail";
 import { Main } from "./Main";
 import { Results } from "./Results";
 
+/**
+ * 
+ * @returns Componente principal de renderizado de aplicación React
+ */
 function App() {
   return (
     <>

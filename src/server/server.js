@@ -32,8 +32,16 @@ if (ENV === 'development') {
   app.use(webpackHotMiddleware(compiler));
 }
 
+/**
+ * Llamado de URLS de API
+ */
 app.use('/api', api);
 
+/**
+ * 
+ * @param {String} html elemento que se va a renderizar en cliente
+ * @returns La cadena de renderizado de server side render
+ */
 const setResponse = (html) => (`
   <!DOCTYPE html>
   <html lang="en">
@@ -48,12 +56,15 @@ const setResponse = (html) => (`
       <title>Mercado libre</title>
   </head>
   <body>
-      <div id="root">${html}</div>
+      <main id="root">${html}</main>
       <script src="assets/app.js" type="text/javascript"></script>
   </body>
   </html>
 `)
 
+/**
+ * Renderiza elemento de React Server Side Rendering
+ */
 const renderApp = (req, res) => {
   const html = renderToString(
     <ItemsContextProvider>
@@ -65,8 +76,14 @@ const renderApp = (req, res) => {
   res.send(setResponse(html))
 }
 
+/**
+ * Realiza el llamado del SSR en cualquier dirección que llame el cliente
+ */
 app.get('*', renderApp);
 
+/**
+ * Monta aplicación en un puerto determinado
+ */
 app.listen(PORT, (err) => {
   if (err) return console.log(err);
   return console.log(`Sever listen in port ${PORT}`);

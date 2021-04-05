@@ -7,6 +7,10 @@ import { getQuery } from '../util/HttpUtil';
 import { ITEMS_SEARCH } from "../util/constants";
 import { ItemsContext } from '../context/ItemsContext';
 
+/**
+ * 
+ * @returns Componente de búsqueda con lógica para traer la lista de productos del API
+ */
 export const Search = () => {
   const busqueda = useInput('');
   const history = useHistory();

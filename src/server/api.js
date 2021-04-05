@@ -5,6 +5,9 @@ import { API_BASE, API_ITEMS, API_SEARCH, API_CATEGORY } from "../frontend/util/
 const apiRoutes = express.Router();
 const LIMIT_RANGE = 4
 
+/**
+ * Servicio web de busqueda de productos
+ */
 apiRoutes.get('/items', (req, res) => {
     const query = req.query.q
     fetch(`${API_BASE}${API_SEARCH}${query}`)
@@ -51,6 +54,9 @@ apiRoutes.get('/items', (req, res) => {
         })
 })
 
+/**
+ * Servicio wb de busqueda de producto por id
+ */
 apiRoutes.get('/items/:id', (req, res) => {
     const id = req.params.id
     const urlItem = `${API_BASE}${API_ITEMS}${id}`

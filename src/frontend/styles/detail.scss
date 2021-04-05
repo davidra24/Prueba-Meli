@@ -9,6 +9,12 @@
     padding: 10px 0;
     display: flex;
     color: $middlegray;
+    flex-wrap: wrap;
+    margin: 16px auto;
+}
+
+.detail__breadcum p {
+    margin: 0;
 }
 
 @media(min-width: 320px){
