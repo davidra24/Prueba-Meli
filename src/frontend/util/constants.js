@@ -13,3 +13,7 @@ export const API_CATEGORY = 'categories/'
 export const ITEMS_SEARCH = '/items?search='
 export const ITEMS_SEARCH_PATH = '/items'
 export const ITEM_ID = '/items/:id'
+
+//Route API
+export const API_BASE_ITEMS = '/api/items'
+export const API_QUERY = '?q='

@@ -1,49 +1,30 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import '../styles/search.scss';
 import logo from '../images/logo.png';
-import { Link, useHistory } from 'react-router-dom';
-import { useInput } from '../hooks/useInput';
-import { getQuery } from '../util/HttpUtil';
-import { ITEMS_SEARCH } from "../util/constants";
-import { ItemsContext } from '../context/ItemsContext';
+import { Link } from 'react-router-dom';
 
 /**
- * 
- * @returns Componente de búsqueda con lógica para traer la lista de productos del API
+ *
+ * @param {ReactEvent} handleSubmit Acción que ejecutará el formulario una vez ejecutada la acción del formulario
+ * @param {useInputHook} search Hook de manejo de input de formulario
+ * @returns Componente de búsqueda con lógica traer la lista de productos del API
  */
-export const Search = () => {
-  const busqueda = useInput('');
-  const history = useHistory();
-  const { state } = useContext(ItemsContext);
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const { status, data } = await getQuery(busqueda.value);
-    if (status === 200) {
-      state.setSearchQuery(busqueda.value)
-      state.setSearch(data);
-      history.push(`${ITEMS_SEARCH}${busqueda.value}`);
-    } else {
-      history.push('/');
-    }
-  };
-
-  return (
-    <form onSubmit={handleSubmit} className='search__container'>
-      <Link to='/'>
-        <img src={logo} alt='logo Mercado libre' className='search__logo' />
-      </Link>
-      <div className='search__box'>
-        <input
-          type='text'
-          className='search__input'
-          placeholder='Nunca dejes de buscar'
-          value={busqueda.value}
-          onChange={busqueda.onChange}
-        />
-        <button className='search__submit'>
-          <span className='search__sumbit-icon'></span>
-        </button>
-      </div>
-    </form>
-  );
-};
+export const Search = ({ handleSubmit, search }) => (
+  <form onSubmit={handleSubmit} className='search__container'>
+    <Link to='/'>
+      <img src={logo} alt='logo Mercado libre' className='search__logo' />
+    </Link>
+    <div className='search__box'>
+      <input
+        type='text'
+        className='search__input'
+        placeholder='Nunca dejes de buscar'
+        value={search.value}
+        onChange={search.onChange}
+      />
+      <button className='search__submit'>
+        <span className='search__sumbit-icon'></span>
+      </button>
+    </div>
+  </form>
+);

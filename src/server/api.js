@@ -22,7 +22,8 @@ apiRoutes.get('/items', (req, res) => {
             const items = []
             response.results.forEach((result, index) => {
                 if(index < LIMIT_RANGE){
-                    const condition = result.attributes.find(res => res.id === 'ITEM_CONDITION').value_name 
+                    const precondition = result.attributes.find(res => res.id === 'ITEM_CONDITION')
+                    const condition = precondition ? precondition.value_name : ''
                     items.push({    
                         id: result.id,
                         title: result.title,

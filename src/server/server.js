@@ -2,9 +2,10 @@ import express from 'express';
 import dotenv from 'dotenv';
 import webpack from 'webpack';
 import { api } from "./api";
-
+import helmet from "helmet"; 
+import path from 'path'
 import React from "react"; 
-import { renderToStaticMarkup, renderToString } from "react-dom/server";
+import { renderToString } from "react-dom/server";
 import { ItemsContextProvider } from '../frontend/context/ItemsContext';
 import { StaticRouter } from "react-router-dom";
 import { renderRoutes } from "react-router-config";
@@ -30,6 +31,23 @@ if (ENV === 'development') {
 
   app.use(webpackDevMiddelware(compiler, serverConfig));
   app.use(webpackHotMiddleware(compiler));
+} else {
+  app.use(express.static(path.join(__dirname, '/public')))
+  app.use(helmet());
+  app.use(helmet.permittedCrossDomainPolicies());
+  app.disable('x-powered-by')
+  app.use(
+    helmet.contentSecurityPolicy({
+      directives: {
+        defaultSrc: ["'self'", "*"],
+        scriptSrc: ["'self'", "*"],
+        objectSrc: ["'none'"],
+        imgSrc: ["'self'", "*", "https://*"],
+        fontSrc: ["'self'", '*', "https://*", "data:"],
+        upgradeInsecureRequests: [],
+      },
+    })
+  );
 }
 
 /**
@@ -52,12 +70,13 @@ const setResponse = (html) => (`
       <meta name="theme-color" content="#000000" />
       <meta name="description" content="Web site created using create-react-app"/>
       <link rel="manifest" href="manifest.json" />
-      <link rel="stylesheet" href="assets/app.css">
+      <link rel="stylesheet" href="/assets/app.css">
       <title>Mercado libre</title>
+      <base href="/">
   </head>
   <body>
       <main id="root">${html}</main>
-      <script src="assets/app.js" type="text/javascript"></script>
+      <script src="/assets/app.js" type="text/javascript"></script>
   </body>
   </html>
 `)

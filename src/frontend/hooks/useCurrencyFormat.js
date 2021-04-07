@@ -19,4 +19,4 @@ export const useCurrencyFormat = (amount, currency) => {
  * @returns Transforma la condición del producto del API a español
  */
 export const translateCondition = (condition) => 
-    condition === 'new' ? 'Nuevo' : condition === 'used' ? 'Usado' : 'Reacondicionado'
+    condition === 'new' ? 'Nuevo' : condition === 'used' ? 'Usado' : condition === '' ? '' : 'Reacondicionado'

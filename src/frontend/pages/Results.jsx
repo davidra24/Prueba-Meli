@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Item } from '../components/Item';
-import { Search } from '../components/Search';
 import { ItemsContext } from '../context/ItemsContext';
-import { getQuery } from '../util/HttpUtil';
+import { get } from '../util/HttpUtil';
 import { Loading } from '../components/Loading';
 import '../styles/result.scss';
 import { Breadcum } from '../components/Breadcum';
 import { Layout } from '../containers/Layout';
+import { API_BASE_ITEMS, API_QUERY } from '../util/constants';
 
 /**
  * 
@@ -23,7 +23,6 @@ export const Results = () => {
   if (!actualSearch) history.push('/');
 
   useEffect(async () => {
-    console.log('effect');
     if (
       state.search.items === undefined ||
       state.searchQuery === undefined ||
@@ -37,7 +36,7 @@ export const Results = () => {
 
   const callApi = async (query) => {
     setLoading(true);
-    return await getQuery(query).then((response) => {
+    return await get(`${API_BASE_ITEMS}${API_QUERY}${query}`).then((response) => {
       const { data } = response;
       state.setSearchQuery(query);
       state.setSearch(data);
@@ -53,7 +52,7 @@ export const Results = () => {
       ) : (
         <div className='result__container'>
           <section className='result__breadcum'>
-            {Breadcum(state.search.categories)}
+            <Breadcum categories={state.search.categories} />
           </section>
           <section className='result__items'>
             {state.search.items.map((item) => (

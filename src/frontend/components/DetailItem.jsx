@@ -18,9 +18,9 @@ export const DetailItem = ({ item }) => (
       </picture>
     <div className='detail__item-buy'>
       <div className='detail__item-condition'>
-        <p>{translateCondition(item.condition)}</p>
+        <p className='detail__item-condition-p'>{translateCondition(item.condition)}</p>
         <p>&nbsp;-&nbsp;</p>
-        <p>{item.sold} vendidos</p>
+        <p className='detail__item-condition-sold'>{item.sold} vendidos</p>
         {item.free_shipping && (
         <Tooltip text='Envío gratis'>
           <span className='item__shipping'></span>

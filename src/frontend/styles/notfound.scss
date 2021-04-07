@@ -1,0 +1,16 @@
+.notFound__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-block-start: 5rem;
+}
+.notFound__info-title{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.notFound__info-link{
+    text-decoration: none;
+    color: #747774;
+}

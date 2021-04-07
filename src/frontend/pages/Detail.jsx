@@ -2,10 +2,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import { DetailItem } from '../components/DetailItem';
 import { Loading } from '../components/Loading';
 import { ItemsContext } from '../context/ItemsContext';
-import { getItem } from '../util/HttpUtil';
+import { get } from '../util/HttpUtil';
 import { Breadcum } from '../components/Breadcum';
 import '../styles/detail.scss';
 import { Layout } from '../containers/Layout';
+import notFound from '../images/404.svg';
+import { API_BASE_ITEMS } from '../util/constants';
 
 /**
  * 
@@ -29,7 +31,7 @@ export const Detail = (props) => {
 
   const callApi = async (id) => {
     setLoading(true);
-    return await getItem(id).then((response) => {
+    return await get(`${API_BASE_ITEMS}/${id}`).then((response) => {
       const { data } = response;
       if(data){
         state.setItem(data.item);
@@ -48,12 +50,13 @@ export const Detail = (props) => {
         <Loading />
       ) : state.item === null ? (
         <section className='detail__container-no-item'>
-          No sea ha encontrado el ítem
+          <img src={notFound} alt="not found"/>
+          No se ha encontrado el ítem
         </section>
       ) : (
         <div className='detail__container'>
           <section className='detail__breadcum'>
-            {Breadcum(state.item.categories)}
+          <Breadcum categories={state.item.categories} />
           </section>
           <section className='detail__item'>
             <DetailItem item={state.item} />

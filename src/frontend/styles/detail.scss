@@ -42,6 +42,14 @@
 
 .detail__container-no-item {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-block-start: 3rem;
+}
+
+.detail__container-no-item img {
+    margin-block-end: 2rem;
 }

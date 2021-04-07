@@ -1,0 +1,1 @@
+export const CategoriesMock = ['Electrónica, Audio y Video', 'Televisores', 'Smart', 'Tv', 'Samsung']

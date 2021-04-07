@@ -1,14 +1,13 @@
 const path = require('path');
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const dotenv = require('dotenv')
+const TerserPlugin = require("terser-webpack-plugin");
 
+dotenv.config();
 module.exports = {
-  entry: [path.join(__dirname, 'src', 'frontend', 'index.js'), 
-    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000&reload=true'
-    ],
+  entry: [path.join(__dirname, 'src', 'frontend', 'index.js')],
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'src', 'server', 'public'),
     filename: 'assets/app.js',
     publicPath: '/'
   },
@@ -16,6 +15,10 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   mode: process.env.ENV,
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
   module: {
     rules: [
       {
@@ -24,14 +27,6 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-          },
-        ],
       },
       {
         test: /\.s[ac]ss$/i,
@@ -57,11 +52,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-        template: path.join(__dirname, 'public', 'index.html'),
-        filename: 'index.html'
-    }),
     new MiniCssExtractPlugin({
       filename: 'assets/app.css'
     })
