@@ -56,7 +56,7 @@ export const Detail = (props) => {
       ) : (
         <div className='detail__container'>
           <section className='detail__breadcum'>
-          <Breadcum categories={state.item.categories} />
+            <Breadcum categories={state.item.categories} />
           </section>
           <section className='detail__item'>
             <DetailItem item={state.item} />

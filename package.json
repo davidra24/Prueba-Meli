@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node src/server/index.js",
+    "prestart": "yarn build",
     "dev": "nodemon src/server/index.js",
     "build": "webpack-cli --config webpack.prod.config.js",
     "test": "jest",
