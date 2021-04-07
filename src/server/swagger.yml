@@ -1,0 +1,147 @@
+swagger: "2.0"
+info:
+  description: "Este proyecto corresponde al backend de la prueba de Mercado Libre para Sr. frontend developer"
+  version: "1.0.0"
+  title: "Prueba Mercado Libre"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "cdavidrmirezg24@gmail.com"
+  license:
+    name: "Node.js"
+    url: "https://github.com/nodejs/node/blob/master/LICENSE"
+host: "localhost:5000"
+basePath: "/api"
+tags:
+- name: "items"
+  description: "Servicio de de consulta de productos de mercado libre"
+schemes:
+- "http"
+paths:
+  /items:
+    get:
+      tags:
+      - "items"
+      summary: "Realiza búsqueda de productos"
+      description: "Retorna varios productos según una palabra clave"
+      operationId: "getProductsByQuery"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "q"
+        in: "query"
+        description: "Palabra clave de búsqueda de productos"
+        required: true
+        type: "string"
+      responses:
+        "200": 
+          description: "Operación exitosa"
+          schema:
+            $ref: "#/definitions/Items"
+        "404":
+          description: "Ningún producto se encuentra con ese nombre"
+  /items/{id}:
+    get:
+      tags:
+      - "items"
+      summary: "Busca un producto por id"
+      description: "Retorna un producto"
+      operationId: "getProductById"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "Id de producto a retornar"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "Operación exitosa"
+          schema:
+            $ref: "#/definitions/OneItem"
+        "404":
+          description: "Producto no encontrado"
+definitions:
+  Items:
+    type: object
+    properties:
+      Author:
+        type: object
+        properties:
+          name:
+            type: string
+          lastname:
+            type: string
+      Categories:
+        type: array
+        items: 
+          type: string
+      Items:
+        type: array
+        items: 
+          type: object
+          properties:
+            id:
+              type: string
+            title:
+              type: string
+            price:
+              type: object
+              properties: 
+                currency: 
+                  type: string
+                amount:
+                  type: number
+                decimals:
+                  type: number
+            address:
+              type: string
+            picture:
+              type: string
+            condition:
+              type: string
+            free_shipping:
+              type: boolean
+  OneItem:
+    type: object
+    properties:
+      Author:
+        type: object
+        properties:
+          name:
+            type: string
+          lastname:
+            type: string
+      Item:
+        type: object
+        properties:
+          id:
+            type: string
+          title:
+            type: string
+          categories:
+            type: array
+            items: 
+              type: string
+          price:
+            type: object
+            properties: 
+              currency: 
+                type: string
+              amount:
+                type: number
+              decimals:
+                type: number
+          picture:
+            type: string
+          condition:
+            type: string
+          free_shipping:
+            type: boolean
+          sold_quantitiy:
+            type: number
+          description:
+            type: string
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"

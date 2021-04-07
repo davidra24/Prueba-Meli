@@ -10,15 +10,12 @@ import { ItemsContextProvider } from '../frontend/context/ItemsContext';
 import { StaticRouter } from "react-router-dom";
 import { renderRoutes } from "react-router-config";
 import { routes } from "./routes";
-import cors from "cors";
 
 dotenv.config();
 
 const { PORT, ENV } = process.env;
 
 const app = express();
-
-app.use(cors())
 
 if (ENV === 'development') {
   console.log('Dev config');

@@ -7,7 +7,6 @@ describe('<NotFound />', () => {
         const notFound = shallow(
             <NotFound />
         )
-        
         expect(notFound.length).toEqual(1)
     })
 })

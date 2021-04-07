@@ -1,9 +1,17 @@
 import express from "express";
 import fetch from "node-fetch";
 import { API_BASE, API_ITEMS, API_SEARCH, API_CATEGORY } from "../frontend/util/constants";
+import swaggerUI from "swagger-ui-express";
+import path from "path";
+import fs from "fs";
+import { load } from "js-yaml";
+
+var spec = fs.readFileSync(path.join(__dirname, 'swagger.yml'), 'utf8');
+var swaggerDocument = load(spec);
 
 const apiRoutes = express.Router();
 const LIMIT_RANGE = 4
+
 
 /**
  * Servicio web de busqueda de productos
@@ -51,7 +59,7 @@ apiRoutes.get('/items', (req, res) => {
         })
         .catch((err) => {
             console.log(err);
-            res.send({status: 500, data: null})
+            res.send({status: 404, data: null})
         })
 })
 
@@ -102,5 +110,7 @@ apiRoutes.get('/items/:id', (req, res) => {
         res.send({status: 500})
     })
 })
+
+apiRoutes.use('/', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
 export const api = apiRoutes;
