@@ -21,5 +21,6 @@ deploy:
   skip-cleanup: true
   keep-history: true
   api_key: apiKey
+  app: mercado-libre-challenge
   on
     repo: davidra24/Prueba-Meli
