@@ -56,7 +56,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'assets/app.css'
     }),
-    new FaviconsWebpackPlugin(path.join(__dirname, 'public', 'favicon.png'))
+    new FaviconsWebpackPlugin({
+      logo: path.join(__dirname, 'public', 'favicon.png'),
+      prefix: 'assets/icons/'
+    })
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
