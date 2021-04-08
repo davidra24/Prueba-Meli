@@ -1,9 +1,9 @@
-const path = require('path');
+const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const dotenv = require('dotenv')
-const TerserPlugin = require("terser-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin")
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-const RobotstxtPlugin = require("robotstxt-webpack-plugin");
+const RobotstxtPlugin = require("robotstxt-webpack-plugin")
 const WebpackPwaManifest = require('webpack-pwa-manifest')
 
 dotenv.config();

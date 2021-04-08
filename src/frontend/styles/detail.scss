@@ -7,10 +7,11 @@
     width: 80vw;
     margin: 0 auto;
     padding: 10px 0;
-    display: flex;
     color: $middlegray;
-    flex-wrap: wrap;
     margin: 16px auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .detail__breadcum p {
@@ -32,6 +33,9 @@
 @media(min-width: 1024px){
     .detail__item {
         width: 80vw;
+    }
+    .detail__breadcum {
+        flex-direction: row;
     }
 }
 

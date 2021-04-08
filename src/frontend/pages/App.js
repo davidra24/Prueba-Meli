@@ -5,6 +5,7 @@ import { Main } from './Main';
 import { Loading } from "../components/Loading";
 import { Layout } from '../containers/Layout';
 
+
 /**
  *
  * @returns Componente principal de renderizado de aplicación React
