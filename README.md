@@ -90,18 +90,19 @@ npm run test:coverage o yarn test:coverage
 
 ## Despliegue 📦
 
-_Para realizar el despliegue, se está utilizando Travis CI, como herramienta de integración y despliegue continuo, por esto mismo, para realizar un despliegue se debe realizar la actualización de la rama master._
+_Para realizar el despliegue, se está utilizando Travis CI, como herramienta de integración y despliegue continuo, por esto mismo, para realizar un despliegue se debe realizar la actualización de la rama master, ya sea por medio de un push o por un pull request._
 
 ## Construido con 🛠️
 
 _Para realizar este proyecto se utilizaron las siguientes herramientas_
 
-* [NodeJS](https://nodejs.org/en/docs/) - Es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor basado en JavaScript.
+* [NodeJS](https://nodejs.org/en/docs) - Es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor basado en JavaScript.
 * [ReactJS](https://es.reactjs.org/docs/getting-started.html) - Es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página.
 * [expressJS](https://expressjs.com/en/guide/routing.html) - Es un marco de aplicación web de back-end para Node.js.
-* [webpack](https://webpack.js.org/concepts/) - Es un paquete de módulos de JavaScript de código abierto, diseñado para empaquetar aplicaciones web complejas.
+* [webpack](https://webpack.js.org/concepts) - Es un paquete de módulos de JavaScript de código abierto, diseñado para empaquetar aplicaciones web complejas.
 * [Sass](https://sass-lang.com/documentation) - Es un preprocesador de lenguaje de hoja de estilos en cascada (CSS).
 * [jest](https://jestjs.io/docs/getting-started) - Es un marco de prueba de JavaScript.
+* [TravisCI](https://docs.travis-ci.com) - Es un servicio de integración continua alojado que se utiliza para crear y probar proyectos de software alojados en GitHub y Bitbucket.
 
 ## Autores ✒️
 
