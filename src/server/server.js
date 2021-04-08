@@ -36,7 +36,7 @@ if (ENV === 'development') {
     helmet.contentSecurityPolicy({
       directives: {
         defaultSrc: ["'self'", "*"],
-        scriptSrc: ["'self'", "*"],
+        scriptSrc: ["'self'", "*", "'unsafe-inline'"],
         objectSrc: ["'none'"],
         styleSrc: ["'self'", "'unsafe-inline'"],
         imgSrc: ["'self'", "*", "https://*", "data:"],
