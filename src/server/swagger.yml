@@ -9,12 +9,13 @@ info:
   license:
     name: "Node.js"
     url: "https://github.com/nodejs/node/blob/master/LICENSE"
-host: "localhost:5000"
+host: "mercado-libre-challenge.herokuapp.com"
 basePath: "/api"
 tags:
 - name: "items"
   description: "Servicio de de consulta de productos de mercado libre"
 schemes:
+- "https"
 - "http"
 paths:
   /items:
