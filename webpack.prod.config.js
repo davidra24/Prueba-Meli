@@ -5,13 +5,16 @@ const TerserPlugin = require("terser-webpack-plugin")
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const RobotstxtPlugin = require("robotstxt-webpack-plugin")
 const WebpackPwaManifest = require('webpack-pwa-manifest')
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 dotenv.config();
 module.exports = {
-  entry: [path.join(__dirname, 'src', 'frontend', 'index.js')],
+  entry: {
+    app: path.join(__dirname, 'src', 'frontend', 'index.js')
+  },
   output: {
     path: path.resolve(__dirname, 'src', 'server', 'public'),
-    filename: 'assets/app.js',
+    filename: 'assets/[name].js',
     publicPath: '/'
   },
   resolve: {
@@ -79,7 +82,9 @@ module.exports = {
       "lang": "es-CO",
       "display": "standalone",
       "orientation": "any",
-      "start_url": "https://mercado-libre-challenge.herokuapp.com/",
+      "start_url": "/",
+      "theme_color": "#FFE600",
+      "background_color": "#FFFFFF",
       "filename": "assets/manifest.json",
       "icons": [
         {
@@ -137,7 +142,8 @@ module.exports = {
           "destination": "assets/icons"
         }
       ],
-    })
+    }),
+    new WorkboxPlugin.GenerateSW()
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),

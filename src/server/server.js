@@ -112,6 +112,13 @@ const setResponse = (html) => (`
   <body>
       <main id="root">${html}</main>
       <script src="/assets/app.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+          });
+        }
+      </script>
   </body>
   </html>
 `)
