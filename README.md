@@ -92,6 +92,16 @@ npm run test:coverage o yarn test:coverage
 
 _Para realizar el despliegue, se está utilizando Travis CI, como herramienta de integración y despliegue continuo, por esto mismo, para realizar un despliegue se debe realizar la actualización de la rama master, ya sea por medio de un push o por un pull request._
 
+_Seguido de esto se deberá acceder al dashboard de travis, donde se aloja la integración del proyecto y crear un build, travis se encargará del resto._
+
+_Una vez terminado el despliegue por parte de travis se puede revisar el despliegue en esta url:_ 
+
+> https://mercado-libre-challenge.herokuapp.com/
+
+_De igual forma, podremos acceder a la documentación del backend es esta url:_
+
+> https://mercado-libre-challenge.herokuapp.com/api
+
 ## Construido con 🛠️
 
 _Para realizar este proyecto se utilizaron las siguientes herramientas_
