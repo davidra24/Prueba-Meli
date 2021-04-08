@@ -106,7 +106,6 @@ const setResponse = (html) => (`
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#000000" />
       <meta name="description" content="La comunidad de compra y venta online más grande de América Latina."/>
-      <link rel="manifest" href="manifest.json" />
       <link rel="stylesheet" href="/assets/app.css">
       <title>Mercado libre</title>
       <base href="/">
