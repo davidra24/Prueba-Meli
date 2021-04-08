@@ -244,6 +244,8 @@ _De igual forma, se utilizó la herramienta lighthouse de google para realizar p
 - Buenas practicas
 - SEO
 - PWA
+
+
 _EL resultado de dichas pruebas se puede encontrar en la siguiente URL:_
 [Prueba de calidad del sitio](https://davidra24.github.io/performance-test-challenge/)
 
