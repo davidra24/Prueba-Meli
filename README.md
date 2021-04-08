@@ -109,7 +109,7 @@ _El cuál ejecutará tanto el backend como el frontend, por medio de webpack_
 
 #### Entorno de producción
 
-_Una vez instaladas las dependencias y configuradas las variables de entorno, procedemos a la ejecución, para ejecutar en un ambiente de producción procedemos a crear el build de producción, para esto utilzamos el siguiente comando_
+_Una vez instaladas las dependencias y configuradas las variables de entorno, procedemos a la ejecución, para ejecutar en un ambiente de producción, procedemos a crear el build correspondiente a este entorno, para esto utilizaremos el siguiente comando_
 
 ```
 
@@ -195,7 +195,7 @@ _Una vez terminado el despliegue por parte de travis se puede revisar el desplie
 
   
 
-_De igual forma, podremos acceder a la documentación del backend es esta url:_
+_De igual forma, podremos acceder a la documentación del backend en esta url:_
 
   
 
@@ -215,13 +215,13 @@ _Para realizar este proyecto se utilizaron las siguientes herramientas_
 
 *  [ReactJS](https://es.reactjs.org/docs/getting-started.html) - Es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página.
 
-*  [expressJS](https://expressjs.com/en/guide/routing.html) - Es un marco de aplicación web de back-end para Node.js.
+*  [ExpressJS](https://expressjs.com/en/guide/routing.html) - Es un marco de aplicación web de back-end para Node.js.
 
-*  [webpack](https://webpack.js.org/concepts) - Es un paquete de módulos de JavaScript de código abierto, diseñado para empaquetar aplicaciones web complejas.
+*  [Webpack](https://webpack.js.org/concepts) - Es un paquete de módulos de JavaScript de código abierto, diseñado para empaquetar aplicaciones web complejas.
 
 *  [Sass](https://sass-lang.com/documentation) - Es un preprocesador de lenguaje de hoja de estilos en cascada (CSS).
 
-*  [jest](https://jestjs.io/docs/getting-started) - Es un marco de prueba de JavaScript.
+*  [Jest](https://jestjs.io/docs/getting-started) - Es un marco de prueba de JavaScript.
 
 *  [TravisCI](https://docs.travis-ci.com) - Es un servicio de integración continua alojado que se utiliza para crear y probar proyectos de software alojados en GitHub y Bitbucket.
 
