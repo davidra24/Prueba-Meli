@@ -27,8 +27,7 @@ deploy:
   provider: heroku
   skip-cleanup: true
   keep-history: true
-  api_key: 
-    secure: HSEBySluCG+T9GUV85XaWm6JDpeVdL/+6OTgShYukgWpobKxbisQgbBfYRgoF9pEUERcq1Cll6ozFGNPJYMsAHTpKXVrM+/DaoSVOXYGZlqo+MJyqukypMW69Di4jeD5xRZ/de9jt4TjA4K9G8ImxqHPG1s4J/231q+7mxHM6l46Ee4H08irtflR640Tc2NVlQ4AObjQKJ3LN6bqv95kP77A8X+X5gGDvwfIj8jbDXxS2s9CWAmaa50w7CHYQ4XQno7sePomwVcxxQ/OjCEWWDpFaecHm+8SK4D+5XPYBwWYGjjfMo3vvCxOPhBKMaD2zGD1xtuvoUWLcwgbT+EHeygMjvIx8Dso3YX9a/32VBVP2eiIb0Z5D397drhOQO4f8oBZSeVzUqh+ed6Rrce8zT7CdFhtm9e7MsbOoB1omhXgiUaqbZQnQX7PZyaJlIPY8DIl170G/1tIRb+/Q+10oM8H2/PeoEp5GL2e689nY9fnElaCcD2jdVgVQf8Nw5xmstJBAZooZbaRbpmJRXMmiavGQQWYt1TB7Izh2Tdg2Q/lk2A40xhhgz4W6mKDFmBuuHGttDCX4GDj8njml6F1IW3Lx62PLYtPCUG/zohg0juQxqcZpD4PWd+km8Y1uMv67ax2c7mUBuyfgRdY2B9gDvywGKJHcC7tZP2sN6t+52A=
+  api_key: $HEROKU_API_KEY
   app: mercado-libre-challenge
   on:
     repo: davidra24/Prueba-Meli
