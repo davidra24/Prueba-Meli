@@ -1,6 +1,6 @@
 # Challenge Mercado Libre
 
-_El siguiente proyecto corresponde a un challenge de mercadolibre.com, con el objetivo de medir la capacidad para trabajar con ellos en el cargo de Sr. Frontend Developer_
+_El siguiente proyecto corresponde a un challenge de frontend por parte de mercadolibre.com_
 
 _Dicho proyecto está construido bajo tecnologías de Javascript (NodeJS, ReactJS)_
 
