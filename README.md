@@ -183,7 +183,7 @@ _Para realizar el despliegue, se está utilizando Travis CI, como herramienta de
 
   
 
-_Seguido de esto se deberá acceder al dashboard de travis, donde se aloja la integración del proyecto y crear un build, travis se encargará del resto._
+_Seguido de esto se deberá acceder al dashboard de travis, donde se aloja la integración del proyecto, donde se podrá observar el procesos del build, travis se encargará de todo el proceso de despliegue de forma automática._
 
   
 
