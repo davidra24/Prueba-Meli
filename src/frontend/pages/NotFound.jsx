@@ -4,7 +4,7 @@ import { Layout } from '../containers/Layout';
 import notFound from "../images/404.svg";
 import '../styles/notfound.scss'
 
-export const NotFound = () => (
+const NotFound = () => (
     <Layout>
         <section className='notFound__container'>
             <picture>
@@ -17,3 +17,5 @@ export const NotFound = () => (
         </section>
     </Layout>
 )
+
+export default NotFound

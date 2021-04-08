@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 export const Search = ({ handleSubmit, search }) => (
   <form onSubmit={handleSubmit} className='search__container'>
     <Link to='/'>
-      <img src={logo} alt='logo Mercado libre' className='search__logo' />
+      <img className='search__logo' src={logo} alt='logo Mercado libre' className='search__logo' />
     </Link>
     <div className='search__box'>
       <input
@@ -22,7 +22,7 @@ export const Search = ({ handleSubmit, search }) => (
         value={search.value}
         onChange={search.onChange}
       />
-      <button className='search__submit'>
+      <button className='search__submit' aria-label="search">
         <span className='search__sumbit-icon'></span>
       </button>
     </div>

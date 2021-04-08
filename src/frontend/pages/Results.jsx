@@ -13,7 +13,8 @@ import { API_BASE_ITEMS, API_QUERY } from '../util/constants';
  * 
  * @returns Página componente de resultados de busqueda de productos
  */
-export const Results = () => {
+
+const Results = () => {
   const history = useHistory();
   const actualSearch = history.location.search;
   const query = actualSearch.split('=')[1];
@@ -64,3 +65,5 @@ export const Results = () => {
     </Layout>
   );
 };
+
+export default Results

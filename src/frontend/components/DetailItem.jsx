@@ -31,7 +31,7 @@ export const DetailItem = ({ item }) => (
       <p className='detail__item-amount'>
         {useCurrencyFormat(item.price.amount, item.price.currency)}
       </p>
-      <button className='detail__item-button'>Comprar</button>
+      <button className='detail__item-button' aria-label="buy">Comprar</button>
     </div>
     <div className='detail__item-description'>
       <h5 className='detail__item-description-title'>

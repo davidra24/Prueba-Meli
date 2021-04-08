@@ -14,7 +14,7 @@ import { API_BASE_ITEMS } from '../util/constants';
  * @param {ReactProps} props Propiedades que ereda un componente de React
  * @returns Página de detalle del producto
  */
-export const Detail = (props) => {
+const Detail = (props) => {
   const { state } = useContext(ItemsContext);
   const [loading, setLoading] = useState(true);
   const {
@@ -66,3 +66,5 @@ export const Detail = (props) => {
     </Layout>
   );
 };
+
+export default Detail
