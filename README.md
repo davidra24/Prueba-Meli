@@ -4,6 +4,8 @@ _El siguiente proyecto corresponde a un challenge de mercadolibre.com, con el ob
 
 _Dicho proyecto está construido bajo tecnologías de Javascript (NodeJS, ReactJS)_
 
+Para acceder a la instancia actual de este proyecto, se debe ir a la siguiente URL:  [**Challenge Mercado Libre**](https://mercado-libre-challenge.herokuapp.com/)
+
 ## Comenzando 🚀
 
 _Este proyecto está alojado en la siguiente URL: https://github.com/davidra24/Prueba-Meli, desde dónde se deberá clonar el repositorio para trabajar de manera local el desarrollo._

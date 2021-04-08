@@ -79,7 +79,7 @@ apiRoutes.get('/items/:id', (req, res) => {
         const parentCategorie = await fetch(`${API_BASE}${API_CATEGORY}${response[0].category_id}`)
                 .then(response => response.json())
         const title = response[0].title.replace(/^\s+/g, '').split(' ')
-        const result = [title[0], title[1], title[2]]
+        const result = [title[0], title[1], title[2], title[3], title[4]]
         const categories = [parentCategorie.path_from_root[0].name, parentCategorie.name, ...result]
         const item = {
             author: {

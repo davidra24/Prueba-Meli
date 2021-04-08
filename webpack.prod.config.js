@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const dotenv = require('dotenv')
 const TerserPlugin = require("terser-webpack-plugin");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 dotenv.config();
 module.exports = {
@@ -54,7 +55,8 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'assets/app.css'
-    })
+    }),
+    new FaviconsWebpackPlugin(path.join(__dirname, 'public', 'favicon.png'))
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
