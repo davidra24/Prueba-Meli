@@ -66,7 +66,7 @@ module.exports = {
       policy: [
         {
           userAgent: "*",
-          disallow: "/",
+          allow: "/",
         }
       ],
       host: "https://mercado-libre-challenge.herokuapp.com/",
@@ -80,7 +80,7 @@ module.exports = {
       "display": "standalone",
       "orientation": "any",
       "start_url": "https://mercado-libre-challenge.herokuapp.com/",
-      "filename": "manifest.json",
+      "filename": "assets/manifest.json",
       "icons": [
         {
           "src": "public/android-chrome-36x36.png",
