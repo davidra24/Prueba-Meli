@@ -102,11 +102,10 @@ const setResponse = (html) => (`
   <html lang="en">
   <head>
       <meta charset="utf-8" />
-      <link rel="icon" href="/assets/icons/favicon.png" />
+      ${favicon}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#000000" />
-      <meta name="description" content="Web site created using create-react-app"/>
-      ${favicon}
+      <meta name="description" content="La comunidad de compra y venta online más grande de América Latina."/>
       <link rel="manifest" href="manifest.json" />
       <link rel="stylesheet" href="/assets/app.css">
       <title>Mercado libre</title>
