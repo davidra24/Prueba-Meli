@@ -10,8 +10,14 @@ import '../styles/main.scss';
 export const Main = () => {
   const { handleSubmit, search } = useQuery('');
   return (
-    <article className='main__search-container'>
-      <Search handleSubmit={handleSubmit} search={search} />
-    </article>
+    <>
+      <Helmet>
+        <title>Mercado Libre</title>
+        <meta name='description' content='La comunidad de compra y venta online más grande de América Latina.' />
+      </Helmet>
+      <article className='main__search-container'>
+        <Search handleSubmit={handleSubmit} search={search} />
+      </article>
+    </>
   );
 };
