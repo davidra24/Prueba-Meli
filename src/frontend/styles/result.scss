@@ -10,19 +10,30 @@
         margin: 0 auto;
         background-color: white;
     }
+    .result__breadcum{
+        width: 90vw;
+    }
 }
-@media (min-width: 700px) {
+@media (min-width: 1024px) {
     .result__items {
-        width: 60vw;
+        width: 70vw;
         margin: 0 auto;
         background-color: white;
+    }
+    .result__breadcum {
+        width: 70vw;
     }
 }
 
 .result__breadcum {
-    width: 58vw;
-    margin: 0 auto;
+    margin: 16px auto;
     padding: 10px 0;
     display: flex;
+    flex-wrap: wrap;
     color: $middlegray;
+}
+
+.result__breadcum > p {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
 }

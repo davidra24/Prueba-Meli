@@ -25,7 +25,6 @@ if (ENV === 'development') {
   const compiler = webpack(webpackConfig);
   const { publicPath } = webpackConfig.output;
   const serverConfig = { serverSideRender: true, publicPath };
-
   app.use(webpackDevMiddelware(compiler, serverConfig));
   app.use(webpackHotMiddleware(compiler));
 } else {
@@ -53,7 +52,7 @@ if (ENV === 'development') {
  */
 app.use('/api', api);
 
-const favicon = `
+const metaInfo = `
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-touch-icon-72x72.png">
@@ -102,7 +101,7 @@ const setResponse = (html) => (`
   <html lang="es">
   <head>
       <meta charset="utf-8" />
-      ${favicon}
+      ${metaInfo}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#000000" />
       <meta name="description" content="La comunidad de compra y venta online más grande de América Latina."/>

@@ -10,12 +10,12 @@
     color: $middlegray;
     margin: 16px auto;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
 }
 
 .detail__breadcum p {
-    margin: 0;
+    margin-block-start: 2px;
+    margin-block-end: 2px;
 }
 
 @media(min-width: 320px){
@@ -30,14 +30,6 @@
     }
 }
 
-@media(min-width: 1024px){
-    .detail__item {
-        width: 80vw;
-    }
-    .detail__breadcum {
-        flex-direction: row;
-    }
-}
 
 .detail__item {
     margin: 0 auto;
