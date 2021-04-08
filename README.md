@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# Challenge Mercado Libre
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_El siguiente proyecto corresponde a un challenge de mercadolibre.com, con el objetivo de medir la capacidad para trabajar con ellos en el cargo de Sr. Frontend Developer_
 
-## Available Scripts
+_Dicho proyecto está construido bajo tecnologías de Javascript (NodeJS, ReactJS)_
 
-In the project directory, you can run:
+## Comenzando 🚀
 
-### `yarn start`
+_Este proyecto está alojado en la siguiente URL: https://github.com/davidra24/Prueba-Meli, desde dónde se deberá clonar el repositorio para trabajar de manera local el desarrollo._
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Mira **Despliegue** para conocer como desplegar el proyecto.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+### Pre-requisitos 📋
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_Antes de empezar se debe contar con los siguientes requisitos_
 
-### `yarn build`
+```
+ - NodeJS v14.15.1
+ - npm v6.14.8
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Instalación 🔧
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+_Para la instalación de dependencias necesarias se deben ejecutar los siguientes comandos:_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm install o yarn
+```
 
-### `yarn eject`
+_Seguido de esto es necesario crear el archivo **.env**, para poder trabajar bajo el entorno de desarrollo, o generar los archivos de producción_
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+En el archivo debe ir la siguiente información
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Para Desarrollo
+```
+ENV=development
+PORT=5000
+```
+#### Para Producción
+```
+ENV=production
+PORT=5000
+```
+## Ejecución💻
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Entorno de desarrollo
+_Una vez instaladas las dependencias y configuradas las variables de entorno, procedemos a la ejecución, para ejecutar en un ambiente de desarrollo procedemos a utilizar el siguiente comando_
+```
+npm run dev o yarn dev
+```
+_El cuál ejecutará tanto el backend como el frontend, por medio de webpack_
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Entorno de producción
+_Una vez instaladas las dependencias y configuradas las variables de entorno, procedemos a la ejecución, para ejecutar en un ambiente de producción procedemos a crear el build de producción, para esto utilzamos el siguiente comando_
+```
+npm run build o yarn build
+```
+_Seguido de esto se generará una carpeta en la ruta src/server/public, la cuál estará disponible para hacer renderizado desde el servidor en modo de producción, una vez generada esta carpeta procedemos a utilizar el siguiente comando_
+```
+npm start o yarn start
+```
+_El cuál ejecutará tanto el backend como el frontend, por medio de webpack_
 
-## Learn More
+Una vez ejecutado cualquiera de los dos entornos, podremos empezar a utilizar el proyecto, el cuál para acceder se deberá entrar a la URL: 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> http://localhost:5000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para acceder al backend, podremos observar la documentación como está funcionando en la siguiente URL:
 
-### Code Splitting
+> http://localhost:5000/api
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Ejecutando las pruebas ⚙️
 
-### Analyzing the Bundle Size
+_Para realizar pruebas unitarias, con Jest, utilizaremos el siguiente comando_
+```
+npm run test o yarn test
+```
+_Si queremos dejar que jest use una instancia continúa y realice pruebas en tiempo real, debemos ejecutar el siguiente comando_
+```
+npm run test:watch o yarn test:watch
+```
+_Si deseamos analizar la cobertura de nuestras pruebas, debemos ejecutar el siguiente comando, que nos generará una nueva carpeta que nos mostrará la cobertura en cada archivo de js que estemos utilizando_
+```
+npm run test:coverage o yarn test:coverage
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Despliegue 📦
 
-### Making a Progressive Web App
+_Para realizar el despliegue, se está utilizando Travis CI, como herramienta de integración y despliegue continuo, por esto mismo, para realizar un despliegue se debe realizar la actualización de la rama master._
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Construido con 🛠️
 
-### Advanced Configuration
+_Para realizar este proyecto se utilizaron las siguientes herramientas_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* [NodeJS](https://nodejs.org/en/docs/) - Es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor basado en JavaScript.
+* [ReactJS](https://es.reactjs.org/docs/getting-started.html) - Es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página.
+* [expressJS](https://expressjs.com/en/guide/routing.html) - Es un marco de aplicación web de back-end para Node.js.
+* [webpack](https://webpack.js.org/concepts/) - Es un paquete de módulos de JavaScript de código abierto, diseñado para empaquetar aplicaciones web complejas.
+* [Sass](https://sass-lang.com/documentation) - Es un preprocesador de lenguaje de hoja de estilos en cascada (CSS).
+* [jest](https://jestjs.io/docs/getting-started) - Es un marco de prueba de JavaScript.
 
-### Deployment
+## Autores ✒️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* **Carlos David Ramírez Gómez** - *Totalidad del proyecto* - [davidra24](https://github.com/davidra24)
 
-### `yarn build` fails to minify
+## Licencia 📄
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este proyecto está bajo la Licencia (MIT) - mira el archivo [LICENSE.txt](https://github.com/davidra24/Prueba-Meli/blob/master/LICENSE.txt) para detalles
+
+---
+⌨️ Hecho con ❤️ por [davidra24](https://github.com/davidra24/Prueba-Meli) 😃
