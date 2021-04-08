@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Search } from '../components/Search';
 import { useQuery } from '../hooks/useQuery';
 import '../styles/main.scss';
