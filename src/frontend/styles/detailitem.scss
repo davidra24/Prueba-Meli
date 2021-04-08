@@ -35,12 +35,11 @@
   .detail__item-image-container {
     width: 500px;
   }
+  .detail__item-image {
+    width: auto;
+  }
 }
 
-.detail__item-image {
-  width: auto;
-  height: auto;
-}
 
 @media (min-width: 1366px) {
   .detail__item-container {
