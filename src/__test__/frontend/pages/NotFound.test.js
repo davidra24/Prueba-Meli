@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from "enzyme";
-import { NotFound } from '../../../frontend/pages/NotFound';
+import NotFound from '../../../frontend/pages/NotFound';
 
 describe('<NotFound />', () => {
     test('Render del componente App', () => {

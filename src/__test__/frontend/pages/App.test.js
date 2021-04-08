@@ -1,5 +1,6 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, render} from 'enzyme';
+import { screen } from "@testing-library/react";
 import { ProviderMock } from '../../../__mocks__/ProviderMock';
 import { App } from '../../../frontend/pages/App';
 
@@ -9,7 +10,9 @@ describe('<App />', () => {
       <App />
     </ProviderMock>
   );
+  
   test('Render del componente App', () => {
     expect(app.length).toEqual(1);
   });
+
 });

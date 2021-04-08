@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { ProviderMock } from '../../../__mocks__/ProviderMock';
-import { Detail } from '../../../frontend/pages/Detail';
+import Detail from '../../../frontend/pages/Detail';
 
 describe('<Detail />', () => {
 const matchMock = { params: { id: 1 }, isExact: true, path: '', url: '' }

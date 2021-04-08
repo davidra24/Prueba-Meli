@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { ProviderMock } from '../../../__mocks__/ProviderMock';
-import { Results } from '../../../frontend/pages/Results';
+import Results from '../../../frontend/pages/Results';
 
 describe('<Results />', () => {
   const results = mount(
