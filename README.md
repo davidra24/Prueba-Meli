@@ -183,9 +183,9 @@ _Para realizar el despliegue, se está utilizando Travis CI, como herramienta de
 
   
 
-_Seguido de esto se deberá acceder al dashboard de travis, donde se aloja la integración del proyecto, donde se podrá observar el procesos del build, travis se encargará de todo el proceso de despliegue de forma automática._
+_Seguido de esto se deberá acceder al dashboard de travis, donde se aloja la integración del proyecto, donde se podrá observar el procesos del build, travis se encargará de todo el proceso de despliegue de forma automática, para conocer el estado de despliegue se puede consultar la siguiente URL:_
 
-  
+[Travis CI](https://travis-ci.com/github/davidra24/Prueba-Meli)
 
 _Una vez terminado el despliegue por parte de travis se puede revisar el despliegue en esta url:_
 
