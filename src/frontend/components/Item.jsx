@@ -12,7 +12,9 @@ import { Tooltip } from './Tooltip';
  */
 export const Item = ({ item }) => (
   <Link className='item__container' to={`${ITEMS_SEARCH_PATH}/${item.id}`}>
-    <img className='item__img' src={item.picture} alt={item.title} />
+    <picture className='item__img-container'>
+      <img className='item__img' src={item.picture} alt={item.title} />
+    </picture>
     <div className='item__info-container'>
       <div className='item__info-shipping'>
         <p className='item__price'>
