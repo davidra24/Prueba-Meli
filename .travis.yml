@@ -17,6 +17,12 @@ jobs:
       script: yarn test
     - stage: build
       script: yarn build
+notifications:
+  email:
+    reciepients:
+      - cdavidramirezg24@gmail.com
+    on_success: always
+    on_failure: always
 deploy:
   provider: heroku
   skip-cleanup: true
